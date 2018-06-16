@@ -1,5 +1,5 @@
 typedef struct {
     int rows;
     int columns;
-    double *contents;
+    double *elements;
 } Matrix;
