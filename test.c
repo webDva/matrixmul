@@ -1,9 +1,9 @@
 #include "matrixmul.h"
 
-Matrix A, B, C;
-
 int main(int argc, char const *argv[])
 {
+
+    static Matrix A, B, C;
 
     A.rows = 2; A.columns = 2;
     B.rows = 2; B.columns = 2;
