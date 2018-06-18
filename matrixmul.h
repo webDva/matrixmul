@@ -1,13 +1,14 @@
 #ifndef MATRIX_MUL
 #define MATRIX_MUL
 
+#define MAX_ELEMENTS 1000
+
 typedef struct MatrixStruct {
     int rows;
     int columns;
-    double *elements;
+    float elements[MAX_ELEMENTS];
 } Matrix;
 
-void *initializeMemory(int);
-Matrix add(Matrix, Matrix);
+int add(Matrix *, Matrix *, Matrix *);
 
 #endif
