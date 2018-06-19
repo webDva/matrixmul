@@ -10,10 +10,10 @@ int main(int argc, char const *argv[])
 
     for (int i = 0; i < A.rows * A.columns; i++) {
         A.elements[i] = 3;
-        B.elements[i] = 3;
+        B.elements[i] = 6;
     }
 
-    add(&A, &B, &C);
+    subtract(&A, &B, &C);
 
     return 0;
 }

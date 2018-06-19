@@ -10,5 +10,6 @@ typedef struct MatrixStruct {
 } Matrix;
 
 int add(Matrix *, Matrix *, Matrix *);
+int subtract(Matrix *, Matrix *, Matrix *);
 
 #endif
