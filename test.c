@@ -5,8 +5,8 @@ int main(int argc, char const *argv[])
 
     static Matrix A, B, C;
 
-    A.rows = 2; A.columns = 2;
-    B.rows = 2; B.columns = 2;
+    setRowsColumns(2, 2, &A);
+    setRowsColumns(2, 2, &B);
 
     for (int i = 0; i < A.rows * A.columns; i++) {
         A.elements[i] = 3;

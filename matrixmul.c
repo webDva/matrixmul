@@ -31,3 +31,11 @@ int subtract(Matrix *A, Matrix *B, Matrix *C) {
 
     return 0;
 }
+
+void setRowsColumns(int rows, int columns, Matrix *matrix) {
+
+    matrix->rows = rows;
+    matrix->columns = columns;
+
+    return;
+}
