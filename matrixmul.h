@@ -12,5 +12,6 @@ typedef struct MatrixStruct {
 int add(Matrix *, Matrix *, Matrix *);
 int subtract(Matrix *, Matrix *, Matrix *);
 void setRowsColumns(int rows, int columns, Matrix *);
+void setElement(int row, int column, float element, Matrix *);
 
 #endif

@@ -39,3 +39,10 @@ void setRowsColumns(int rows, int columns, Matrix *matrix) {
 
     return;
 }
+
+void setElement(int row, int column, float element, Matrix *matrix) {
+
+    matrix->elements[row * matrix->columns + column] = element;
+
+    return;
+}
