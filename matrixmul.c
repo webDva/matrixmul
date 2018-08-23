@@ -46,3 +46,7 @@ void setElement(int row, int column, float element, Matrix *matrix) {
 
     return;
 }
+
+float getElement(int row, int column, Matrix *matrix) {
+    return matrix->elements[row * matrix->columns + column];
+}
