@@ -35,3 +35,35 @@ Returns `-1` if the number of columns of *matrixA* is not equal to the number of
 ### `void clearMatrix(Matrix *)`
 
 Sets all the elements of the given matrix to zero. Useful for reusing matrices.
+
+### `void setRowsColumns(int rows, int columns, Matrix *)`
+
+Sets a `Matrix`'s `rows` and `columns` fields. Takes a pointer to a `Matrix`.
+
+### `void setElement(int row, int column, float element, Matrix *)`
+
+Used for setting a `Matrix`'s elements.
+
+#### Parameters
+
+* `int row` - The row of where to set the new element.
+* `int column` - The column of where to set the new element.
+* `float element` - The element to place.
+* `Matrix *` - The matrix to modify.
+
+### `float getElement(int row, int column, Matrix *)`
+
+Retrieves a matrix's element given a row and column.
+
+#### Parameters
+
+* `int row` - The row to retrieve the element from.
+* `int column` - The column to retrieve the element from.
+* `Matrix *` - The matrix.
+
+### `int add(Matrix *, Matrix *, Matrix *)`
+### `int subtract(Matrix *, Matrix *, Matrix *)`
+
+Artifacts from the very start of development of this library, adds and subtracts matrices. The first two arguments are pointers to the `Matrix`'s to be operated on and the third argument is the result `Matrix` to store the result in.
+
+Returns -1 if the rows or columns are not equal, 0 otherwise.
