@@ -8,7 +8,7 @@ I'm creating a portable C matrix multiplication library as a precursor for a por
 
 # Documentation
 
-# Definitions
+## Definitions
 
 ### `typedef struct MatrixStruct Matrix`
 
