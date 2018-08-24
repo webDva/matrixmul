@@ -14,5 +14,7 @@ int subtract(Matrix *, Matrix *, Matrix *);
 void setRowsColumns(int rows, int columns, Matrix *);
 void setElement(int row, int column, float element, Matrix *);
 float getElement(int row, int column, Matrix *);
+void clearMatrix(Matrix *);
+int multiply(Matrix *matrixA, Matrix *matrixB, Matrix *matrixC);
 
 #endif

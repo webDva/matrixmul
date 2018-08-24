@@ -24,6 +24,7 @@ int subtract(Matrix *A, Matrix *B, Matrix *C) {
 
     C->rows = A->rows;
     C->columns = A->columns;
+    clearMatrix(C);
 
     for (int i = 0; i < (A->rows * B->columns); i++) {
         C->elements[i] = A->elements[i] - B->elements[i];
@@ -49,4 +50,35 @@ void setElement(int row, int column, float element, Matrix *matrix) {
 
 float getElement(int row, int column, Matrix *matrix) {
     return matrix->elements[row * matrix->columns + column];
+}
+
+void clearMatrix(Matrix *matrix) {
+
+    for (int i = 0; i < MAX_ELEMENTS; i++) {
+        matrix->elements[i] = 0;
+    }
+
+    return;
+}
+
+int multiply(Matrix *matrixA, Matrix *matrixB, Matrix *matrixC) {
+
+    if (matrixA->columns != matrixB->rows) {
+        return -1;
+    }
+
+    // set the result matrix's rows and columns numbers and initialize its elements to zero
+    matrixC->rows = matrixA->rows;
+    matrixC->columns = matrixB->columns;
+    clearMatrix(matrixC);
+
+    for (int i = 0; i < matrixC->rows * matrixC->columns; i++) {
+        for (int j = 0, k = 0, m = 0; j < matrixA->columns; j++) {
+            matrixC->elements[i] += getElement(k, j, matrixA) * getElement(j, m, matrixB);
+            k++;
+            m++;
+        }
+    }
+
+    return 0;
 }

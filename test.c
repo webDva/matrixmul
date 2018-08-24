@@ -16,6 +16,7 @@ int main(int argc, char const *argv[])
     }
 
     subtract(&A, &B, &C);
+    multiply(&A, &B, &C);
 
     return 0;
 }
