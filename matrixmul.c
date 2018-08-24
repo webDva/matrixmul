@@ -63,13 +63,13 @@ void clearMatrix(Matrix *matrix) {
 
 int multiply(Matrix *matrixA, Matrix *matrixB, Matrix *matrixC) {
 
+    // un-equal number of columns and rows yield an error value
     if (matrixA->columns != matrixB->rows) {
         return -1;
     }
 
     // set the result matrix's rows and columns numbers and initialize its elements to zero
-    matrixC->rows = matrixA->rows;
-    matrixC->columns = matrixB->columns;
+    setRowsColumns(matrixA->rows, matrixB->columns, matrixC);
     clearMatrix(matrixC);
 
     for (int i = 0; i < matrixC->rows * matrixC->columns; i++) {
