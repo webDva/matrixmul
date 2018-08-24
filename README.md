@@ -28,6 +28,10 @@ As matrices have to be statically declared, `MAX_ELEMENTS` defines the total num
 
 ### `int multiply(Matrix *matrixA, Matrix *matrixB, Matrix *matrixC)`
 
-Multiplies a `Matrix` *matrixA* by a `Matrix` *matrixB* and stores the result in the `Matrix` *matrixC*.
+Multiplies a `Matrix` *matrixA* by a `Matrix` *matrixB* and stores the result in the `Matrix` *matrixC*. Internally uses `clearMatrix`.
 
 Returns `-1` if the number of columns of *matrixA* is not equal to the number of rows of *MatrixB* and returns `0` otherwise.
+
+### `void clearMatrix(Matrix *)`
+
+Sets all the elements of the given matrix to zero. Useful for reusing matrices.
