@@ -8,10 +8,26 @@ I'm creating a portable C matrix multiplication library as a precursor for a por
 
 # Documentation
 
-# Functions
+# Definitions
+
+### `typedef struct MatrixStruct Matrix`
+
+A struct or type for implementing matrices.
+
+#### Struct members
+
+* `int rows` - The number of rows the matrix has.
+* `int columns` - The number of columns the matrix has.
+* `float elements[MAX_ELEMENTS]` - An array of floating point numbers that are the matrix's elements.
+
+### `MAX_ELEMENTS`
+
+As matrices have to be statically declared, `MAX_ELEMENTS` defines the total number of elements a matrix can have. The default value is `1000`.
+
+## Functions
 
 ### `int multiply(Matrix *matrixA, Matrix *matrixB, Matrix *matrixC)`
 
 Multiplies a `Matrix` *matrixA* by a `Matrix` *matrixB* and stores the result in the `Matrix` *matrixC*.
 
-Returns `-1` if the number of columns of **A** is not equal to the number of rows of **B** and returns `0` otherwise.
+Returns `-1` if the number of columns of *matrixA* is not equal to the number of rows of *MatrixB* and returns `0` otherwise.
