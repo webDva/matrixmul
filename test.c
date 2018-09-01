@@ -8,14 +8,16 @@ int main(int argc, char const *argv[])
     setRowsColumns(2, 2, &A);
     setRowsColumns(2, 2, &B);
 
-    for (int i = 0; i < A.rows; i++) {
-        for (int j = 0; j < A.columns; j++) {
-            setElement(i, j, 3, &A);
-            setElement(i, j, 6, &B);
-        }
-    }
+    setElement(1, 1, 2, &A);
+    setElement(1, 2, 1, &A);
+    setElement(2, 1, 0, &A);
+    setElement(2, 2, 3, &A);
 
-    subtract(&A, &B, &C);
+    setElement(1, 1, 1, &B);
+    setElement(1, 2, 0, &B);
+    setElement(2, 1, 1, &B);
+    setElement(2, 2, 2, &B);
+
     multiply(&A, &B, &C);
 
     return 0;

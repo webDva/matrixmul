@@ -43,13 +43,13 @@ void setRowsColumns(int rows, int columns, Matrix *matrix) {
 
 void setElement(int row, int column, float element, Matrix *matrix) {
 
-    matrix->elements[row * matrix->columns + column] = element;
+    matrix->elements[(row - 1) * matrix->columns + (column - 1)] = element;
 
     return;
 }
 
 float getElement(int row, int column, Matrix *matrix) {
-    return matrix->elements[row * matrix->columns + column];
+    return matrix->elements[(row - 1) * matrix->columns + (column - 1)];
 }
 
 void clearMatrix(Matrix *matrix) {
@@ -72,11 +72,11 @@ int multiply(Matrix *matrixA, Matrix *matrixB, Matrix *matrixC) {
     setRowsColumns(matrixA->rows, matrixB->columns, matrixC);
     clearMatrix(matrixC);
 
-    for (int i = 0; i < matrixC->rows * matrixC->columns; i++) {
-        for (int j = 0, k = 0, m = 0; j < matrixA->columns; j++) {
-            matrixC->elements[i] += getElement(k, j, matrixA) * getElement(j, m, matrixB);
-            k++;
-            m++;
+    for (int i = 1; i <= matrixC->rows; i++) {
+        for (int j = 1; j <= matrixC->columns; j++) {
+            for (int k = 1; k <= matrixA->columns; k++) {
+                setElement(i, j, getElement(i, j, matrixC) + getElement(i, k, matrixA) * getElement(k, j, matrixB), matrixC);
+            }
         }
     }
 
