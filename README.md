@@ -65,7 +65,7 @@ Used for setting a `Matrix`'s elements.
 * `float element` - The element to place.
 * `Matrix *` - A pointer to the matrix to modify.
 
-## `float getElement(int row, int column, Matrix *)`
+### `float getElement(int row, int column, Matrix *)`
 
 Retrieves a matrix's element given a row and column.
 
