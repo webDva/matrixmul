@@ -1,10 +1,8 @@
-# matrixmul
+# What is *matrixmul*?
 
-🚧 under construction (in early development) 🚧
+I'm creating a portable C matrix multiplication library as a precursor for a portable neural network library that can fit on microcontrollers for embedded devices, hence portable. That means that this library will adhere to standard C as much as possible, neglecting to use system calls that wouldn't facilitate portability across the myriad of microcontrollers, being careful with its underlying assumptions.
 
-## What is matrixmul?
-
-I'm creating a portable C matrix multiplication library as a precursor for a portable neural network library that can fit on microcontrollers for embedded devices, hence portable. That means that I will adhere to standard C as much as possible, neglecting to use system calls that wouldn't facilitate portability across the myriad of microcontrollers. I'll also endeavor to be careful about my underlying assumptions.
+As this software is being made for microcontrollers, with matrices so small and possibly few, performance speed-wise is inconsequential. This library instead focuses on being simple to use and integrate into a project that involves microcontrollers.
 
 # Documentation
 
