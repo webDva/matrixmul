@@ -84,9 +84,19 @@ Returns -1 if the rows or columns are not equal, 0 otherwise.
 
 These functions may become neglected or removed in the future as this is a matrix multiplication library and, as such, it should probably have its focus on matrix multiplication.
 
+# Setup and installation
+
+For adhering to this project's goal of being easy to use, the entire library is located in a single header file, `matrixmul.h`. To use this library for some task, include the header file with the directive `#include "matrixmul.h"`.
+
 # Testing
 
-`test.c` is used to facilitate testing of the library. This will help with evaluating the performance of the mechanisms of the library. The following is a list of conditions that `test.c` should create.
+`test.c` is used to facilitate testing of the library. This will help with evaluating the performance of the mechanisms of the library. An example for operating `test.c`, using the `gcc` (GNU Compiler Collection) program:
+
+```
+gcc -g test.c matrixmul.h -o test.exe
+```
+
+The following is a list of conditions that `test.c` should create.
 
 ### Creating `Matrix` constructs using static memory allocation
 
