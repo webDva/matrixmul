@@ -3,7 +3,7 @@
 
 // Constant(s)
 
-#define MAX_ELEMENTS 1000
+#define MAX_ELEMENTS 100
 
 // Type(s)
 

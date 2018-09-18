@@ -20,7 +20,7 @@ A struct or type for implementing matrices. Matrices are in row-major form and t
 
 ### `MAX_ELEMENTS`
 
-As matrices have to be statically declared, `MAX_ELEMENTS` defines the total number of elements a matrix can have. The default value is `1000`.
+As matrices have to be statically declared, `MAX_ELEMENTS` defines the total number of elements a matrix can have. The default value is `100`.
 
 ## Library functions
 
