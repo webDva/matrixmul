@@ -10,13 +10,13 @@ As this software is being made for microcontrollers, with matrices so small and 
 
 ### `typedef struct MatrixStruct Matrix`
 
-A struct or type for implementing matrices. Matrices are in row-major form and the elements are in an array. These `Matrix` structs are meant to be statically memory allocated as they are meant to live on embedded systems.
+A struct or type for implementing matrices. Matrices are in row-major order and the elements are in a one-dimensional array. These `Matrix` structs are meant to be statically memory allocated as they are meant to live on embedded systems.
 
 #### Struct members
 
 * `unsigned char rows` - The number of rows the matrix has.
 * `unsigned char columns` - The number of columns the matrix has.
-* `float elements[MAX_ELEMENTS]` - An array of floating point numbers that are the matrix's elements.
+* `float elements[MAX_ELEMENTS]` - An array of floating point numbers that are the matrix's elements. The array is bounded by the maximum number of elements a matrix can have, `MAX_ELEMENTS`.
 
 ### `MAX_ELEMENTS`
 
