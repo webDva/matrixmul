@@ -14,8 +14,8 @@ A struct or type for implementing matrices. Matrices are in row-major form and t
 
 #### Struct members
 
-* `int rows` - The number of rows the matrix has.
-* `int columns` - The number of columns the matrix has.
+* `unsigned char rows` - The number of rows the matrix has.
+* `unsigned char columns` - The number of columns the matrix has.
 * `float elements[MAX_ELEMENTS]` - An array of floating point numbers that are the matrix's elements.
 
 ### `MAX_ELEMENTS`
@@ -44,35 +44,35 @@ Sets all the elements of a given matrix to be zero. Useful for reusing matrices.
 
 * `Matrix *` - A pointer to the matrix to clear.
 
-### `void setRowsColumns(int rows, int columns, Matrix *)`
+### `void setRowsColumns(unsigned char rows, unsigned char columns, Matrix *)`
 
 Sets a `Matrix`'s `rows` and `columns` fields.
 
 #### Parameters
 
-* `int rows` - The number of rows to set the matrix to.
-* `int columns` - The number of columns to set the matrix to.
+* `unsigned char rows` - The number of rows to set the matrix to.
+* `unsigned char columns` - The number of columns to set the matrix to.
 * `Matrix *` - A pointer to the matrix to modify.
 
-### `void setElement(int row, int column, float element, Matrix *)`
+### `void setElement(unsigned char row, unsigned char column, float element, Matrix *)`
 
 Used for setting a `Matrix`'s elements.
 
 #### Parameters
 
-* `int row` - The row of where to set the new element.
-* `int column` - The column of where to set the new element.
+* `unsigned char row` - The row of where to set the new element.
+* `unsigned char column` - The column of where to set the new element.
 * `float element` - The element to place.
 * `Matrix *` - A pointer to the matrix to modify.
 
-### `float getElement(int row, int column, Matrix *)`
+### `float getElement(unsigned char row, unsigned char column, Matrix *)`
 
 Retrieves a matrix's element given a row and column.
 
 #### Parameters
 
-* `int row` - The row to retrieve the element from.
-* `int column` - The column to retrieve the element from.
+* `unsigned char row` - The row to retrieve the element from.
+* `unsigned char column` - The column to retrieve the element from.
 * `Matrix *` - A pointer to the matrix whose element is to be retrieved.
 
 ### `int add(Matrix *, Matrix *, Matrix *)`

@@ -8,8 +8,8 @@
 // Type(s)
 
 typedef struct MatrixStruct {
-    int rows;
-    int columns;
+    unsigned char rows;
+    unsigned char columns;
     float elements[MAX_ELEMENTS];
 } Matrix;
 
@@ -17,9 +17,9 @@ typedef struct MatrixStruct {
 
 int add(Matrix *, Matrix *, Matrix *);
 int subtract(Matrix *, Matrix *, Matrix *);
-void setRowsColumns(int rows, int columns, Matrix *);
-void setElement(int row, int column, float element, Matrix *);
-float getElement(int row, int column, Matrix *);
+void setRowsColumns(unsigned char rows, unsigned char columns, Matrix *);
+void setElement(unsigned char row, unsigned char column, float element, Matrix *);
+float getElement(unsigned char row, unsigned char column, Matrix *);
 void clearMatrix(Matrix *);
 int multiply(Matrix *matrixA, Matrix *matrixB, Matrix *matrixC);
 
@@ -58,7 +58,7 @@ int subtract(Matrix *A, Matrix *B, Matrix *C) {
     return 0;
 }
 
-void setRowsColumns(int rows, int columns, Matrix *matrix) {
+void setRowsColumns(unsigned char rows, unsigned char columns, Matrix *matrix) {
 
     matrix->rows = rows;
     matrix->columns = columns;
@@ -66,14 +66,14 @@ void setRowsColumns(int rows, int columns, Matrix *matrix) {
     return;
 }
 
-void setElement(int row, int column, float element, Matrix *matrix) {
+void setElement(unsigned char row, unsigned char column, float element, Matrix *matrix) {
 
     matrix->elements[(row - 1) * matrix->columns + (column - 1)] = element;
 
     return;
 }
 
-float getElement(int row, int column, Matrix *matrix) {
+float getElement(unsigned char row, unsigned char column, Matrix *matrix) {
     return matrix->elements[(row - 1) * matrix->columns + (column - 1)];
 }
 
