@@ -10,7 +10,7 @@
             "args": [
                 "-g",
                 "test.c",
-                "matrixmul.c",
+                "matrixmul.h",
                 "-o",
                 "test.exe"
             ],
