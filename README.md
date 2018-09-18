@@ -75,15 +75,6 @@ Retrieves a matrix's element given a row and column.
 * `unsigned char column` - The column to retrieve the element from.
 * `Matrix *` - A pointer to the matrix whose element is to be retrieved.
 
-### `int add(Matrix *, Matrix *, Matrix *)`
-### `int subtract(Matrix *, Matrix *, Matrix *)`
-
-Artifacts from the very start of development of this library, adds and subtracts matrices. The first two arguments are pointers to the `Matrix`'s to be operated on and the third argument is the result `Matrix` to store the result in. The result `Matrix` should be cleared with `clearMatrix` first.
-
-Returns -1 if the rows or columns are not equal, 0 otherwise.
-
-These functions may become neglected or removed in the future as this is a matrix multiplication library and, as such, it should probably have its focus on matrix multiplication.
-
 # Setup and installation
 
 For adhering to this project's goal of being easy to use, the entire library is located in a single header file, `matrixmul.h`. To use this library for some task, include the header file with the directive `#include "matrixmul.h"`.
