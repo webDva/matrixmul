@@ -1,3 +1,7 @@
+# NOTICE
+
+This project has been canceled and the project has been superseded by other efforts that more align with the project's goals.
+
 # What is *matrixmul*?
 
 I'm creating a portable C matrix multiplication library as a precursor for a portable neural network library that can fit on microcontrollers for embedded devices, hence portable. That means that this library will adhere to standard C as much as possible, neglecting to use system calls that wouldn't facilitate portability across the myriad of microcontrollers, being careful with its underlying assumptions.
